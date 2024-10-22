@@ -54,7 +54,7 @@ int sudoku_var(int sudoku[TAM][TAM]) {
 
 int main() {
     int n;
-    scanf("%d", &n); /*Número de Instâncias*/
+    scanf("%d", &n); /*Número de Instâncias- Número de Sudokus para Verificação*/
     for (int instancia = 1; instancia <= n; instancia++) {
         int sudoku[TAM][TAM];
 
@@ -64,7 +64,7 @@ int main() {
             }
         }
 
-        printf("Instancia %d\n", instancia);
+        printf("Instancia %d\n", instancia);/*Para Cada Instância um Sudoku Diferente!*/
         if (sudoku_var(sudoku)) {
             printf("SIM\n");
         } else {

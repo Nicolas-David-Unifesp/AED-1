@@ -1,7 +1,7 @@
 /*
   * nome: exemplo44.c
   * descrição: ponteiros
-  * data: 06/11/2012
+  * data: 15/10/2024
   *Resolvido por Nicolas David da Cruz Santos
   */
  #include <stdio.h>

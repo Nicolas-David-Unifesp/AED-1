@@ -1,9 +1,3 @@
-/*
-  * nome: 1383.c
-  * descrição: Criador de Sudoku-Exercício 1383 do Beecrowd
-  * data: 22/10/2024
-  *Resolvido por Nicolas David da Cruz Santos
-  */
 
 #include <stdio.h>
 #include <stdlib.h>

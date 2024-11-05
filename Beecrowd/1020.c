@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 struct cel{
     char conteudo[1000];
@@ -10,7 +11,9 @@ typedef struct cel celula;
 void insere (char y[], celula *p){
     celula * nova;
     nova = malloc (sizeof(celula));
-    nova -> conteudo  ; 
+    strcpy(nova -> conteudo, y);
+    conteudo-> seg = p-> seg;
+    p-> seg = nova;
 }
 
 int main() {
@@ -26,6 +29,7 @@ int main() {
                 var2[k] = A[j];
                 k++;
             }
+          var2[k] = '\0';
         }
         i++;
     }

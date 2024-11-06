@@ -1,3 +1,10 @@
+/*
+  * nome: 3160.c
+  * descrição: Amigos
+  * data: 06/11/2024
+  *Resolvido por Nicolas David da Cruz Santos
+  */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -125,3 +132,10 @@ int main() {
 
     return 0;
 }
+
+/* Anotações para estudo: 
+Um exercicio dificil para mim. 
+Entendi a Ideia do Exercício, mas fiquei com dificuldades de montar a lista. 
+Nesse sentido, o que me deixou confuso foi como orquestrar as listas de forma a fazer o que eu queria
+Preciso entender melhor as estruturas das listas e como utilizá-las corretamente.
+*/

@@ -5,21 +5,19 @@
   *Resolvido por Nicolas David da Cruz Santos
   */
 
-
-
 #include <stdio.h>
 
 int main() {
     double raio, area;
     const double PI = 3.14159;
 
-    // Entrada do valor do raio
+    // Valor do raio
     scanf("%lf", &raio);
 
     // Cálculo da área
     area = PI * raio * raio;
 
-    // Saída formatada com 4 casas decimais e nova linha no final
+    // Imprime a Área
     printf("A=%.4lf\n", area);
 
     return 0;

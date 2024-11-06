@@ -1,3 +1,9 @@
+/*
+  * nome: 1002.c
+  * descrição: Idade em Dias
+  * data: 12/10/2024
+  *Resolvido por Nicolas David da Cruz Santos
+  */
 #include <stdio.h>
 
 int main() {

@@ -81,7 +81,8 @@ int main() {
     }
 
     /* Vamos, então verificar onde inserir a lista!*/
-    
+
+    // Acho que tem que arrumar essa parte!
     if (strcmp(S, "nao") != 0) {
         // Se não achar "nao", vai procurar o amigo S na lista de Luiggy
         temp = busca_amigo(lista_luiggy, S);
@@ -94,15 +95,9 @@ int main() {
             }
         }
     } else {
-        // Inserir a nova lista no final da lista de Luiggy
-        temp = lista_luiggy;// Como é final da lista não usamos seg.
-        while (temp->seg != NULL) {
-            temp = temp->seg;
-        }
-        // Adicionar todos os novos amigos no final
         celula *nova_lista = lista_novos_amigos->seg;// Começa pelo primeiro termo da lista
         while (nova_lista != NULL) {
-            insere(nova_lista->conteudo, temp);
+            insere(nova_lista->conteudo, lista_luiggy);
             nova_lista = nova_lista->seg;
         }
     }

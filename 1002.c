@@ -1,4 +1,9 @@
-
+/*
+  * nome: 1002.c
+  * descrição: Área do Círculo
+  * data: 12/10/2024
+  *Resolvido por Nicolas David da Cruz Santos
+  */
 
 
 

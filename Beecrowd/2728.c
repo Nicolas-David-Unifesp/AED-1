@@ -1,3 +1,10 @@
+/*
+  * nome: 2728.c
+  * descrição: 
+  * data: 10/11/2024
+  *Resolvido por Nicolas David da Cruz Santos
+  */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

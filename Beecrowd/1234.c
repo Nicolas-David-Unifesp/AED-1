@@ -1,3 +1,10 @@
+/*
+  * nome: 1234.c
+  * descrição: Sentença Dançante
+  * data: 10/11/2024
+  *Resolvido por Nicolas David da Cruz Santos
+  */
+
 #include <stdio.h>
 #include <ctype.h>  // Para as funções toupper e tolower
 

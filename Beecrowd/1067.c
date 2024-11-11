@@ -1,3 +1,10 @@
+/*
+  * nome: 1067.c
+  * descrição: Números Impares
+  * data: 12/10/2024
+  *Resolvido por Nicolas David da Cruz Santos
+  */
+
 #include <stdio.h>
 int main() {
     int a;

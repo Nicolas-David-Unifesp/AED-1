@@ -14,24 +14,33 @@ struct cel {
     struct cel *seg;
 };
 typedef struct cel celula;
+ 
+void insere_final(celula *lista, char y[]) {
+    celula *nova = malloc(sizeof(celula));
+    strcpy(nova->conteudo, y);
+    nova->seg = NULL;
 
-void 
-
-
-    void imprime_lista(celula *lista) {
-    celula *temp = lista->seg; 
-    while (temp != NULL) {
-        printf("%s", temp->conteudo);
-        if (temp->seg != NULL) {
-            printf(" "); 
-        }
+    // Percorrer até o final da lista
+    celula *temp = lista;
+    while (temp->seg != NULL) {
         temp = temp->seg;
     }
-    printf("\n");
+    temp->seg = nova;
+}
+
+void imprime_lista(celula *lista) {
+     celula *temp = lista->seg; 
+     while (temp != NULL) {
+      printf("%s", temp->conteudo);
+      if (temp->seg != NULL) {
+            printf(" "); 
+      }
+      temp = temp->seg;
+     }
+     printf("\n");
 }
 
 
-int main (){
+
   
 
-}

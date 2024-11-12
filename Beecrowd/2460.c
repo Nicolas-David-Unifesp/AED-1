@@ -40,6 +40,11 @@ void imprime_lista(celula *lista) {
      printf("\n");
 }
 
+int main(){
+    int N;
+ 
+}
+
 
 
   

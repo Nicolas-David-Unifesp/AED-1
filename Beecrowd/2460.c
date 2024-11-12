@@ -10,42 +10,54 @@
 #include <stdlib.h>
 
 struct cel {
-    char conteudo[21]; 
+    int conteudo; 
     struct cel *seg;
 };
 typedef struct cel celula;
- 
-void insere_final(celula *lista, char y[]) {
-    celula *nova = malloc(sizeof(celula));
-    strcpy(nova->conteudo, y);
-    nova->seg = NULL;
 
-    // Percorrer até o final da lista
-    celula *temp = lista;
-    while (temp->seg != NULL) {
-        temp = temp->seg;
+void Busca_Remove(int x, celula**lst){
+    celula *p, *q;
+    p = *lst;
+    q = *lst->seg;
+    while(q!=NULL && q-> conteudo != x){
+        p = q;
+        q = q-> seg;
     }
-    temp->seg = nova;
+    if(q!=NULL){
+        p->seg = q->seg;
+        free(*q);
+    }
 }
+ void inserefinal(int y, celula**p){
+    celula*nova = malloc(sizeof(celula));
+    nova->conteudo = y;
+    nova-> seg = NULL;
 
-void imprime_lista(celula *lista) {
-     celula *temp = lista->seg; 
-     while (temp != NULL) {
-      printf("%s", temp->conteudo);
-      if (temp->seg != NULL) {
-            printf(" "); 
-      }
-      temp = temp->seg;
-     }
-     printf("\n");
+    if(*p == NULL){
+        *p = nova;
+    }else{
+        celula *temp = *p;
+        while (temp->seg != NULL) {
+            temp = temp->seg;
+        }
+        temp->seg = nova;
+    }
 }
 
 int main(){
-    int N;
- 
+    int N, M, var[5000], var2[5000];
+    scanf("%d",&N);
+    celula*fila = NULL;
+    for(int i = 0 ; i<N; i++){
+        scanf("%d", &var[i]);
+        inserefinal(var[i], &fila);
+    }
+    scanf("%d",&M);
+    for(int j = 0 ; j<N; j++){
+        scanf("%d", &var2[j]);
+        Busca_Remove(var2[j], &fila);
+    }
+    
+    return 0;
 }
-
-
-
-  
-
+    

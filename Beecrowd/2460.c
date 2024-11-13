@@ -77,7 +77,8 @@ int main() {
     // Impressão do que restou
     celula *temp = fila;
     while (temp != NULL) {
-        printf("%d ", temp->conteudo);
+        printf("%d", temp->conteudo);
+        printF(" ");
         temp = temp->seg;
     }
     printf("\n");

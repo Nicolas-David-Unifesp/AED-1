@@ -1,3 +1,10 @@
+/*
+  * nome: 2460.c
+  * descrição: Fila
+  * data: 13/11/2024
+  *Resolvido por Nicolas David da Cruz Santos
+  */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -8,29 +15,27 @@ struct cel {
 };
 typedef struct cel celula;
 
-// Função para remover um elemento da lista
+// Função para remover da lista
 void Busca_Remove(int x, celula** lst) {
     celula *p, *q;
     p = *lst;
-    
-    // Corrigido: acessando corretamente o ponteiro seg
-    q = *lst;  // Começamos com o primeiro elemento
+    q = *lst;  
     while (q != NULL && q->conteudo != x) {
         p = q;
         q = q->seg;
     }
     
-    if (q != NULL) {  // Encontramos o elemento a ser removido
-        if (q == *lst) {  // Se o elemento a ser removido for o primeiro
+    if (q != NULL) {  // Encontramos quem vai ser removido
+        if (q == *lst) {  // Se o elemento a ser removido fosse o primeiro
             *lst = q->seg;  // Atualiza o ponteiro da lista
         } else {
             p->seg = q->seg;  // Remove o elemento
         }
-        free(q);  // Libera a memória
+        free(q);  
     }
 }
 
-// Função para inserir um elemento no final da lista
+
 void inserefinal(int y, celula** p) {
     celula *nova = malloc(sizeof(celula));
     nova->conteudo = y;
@@ -50,26 +55,26 @@ void inserefinal(int y, celula** p) {
 int main() {
     int N, M, var[5000], var2[5000];
     
-    // Leitura do número de elementos na lista
+    // Leitura do número de elementos
     scanf("%d", &N);
     celula *fila = NULL;
     
-    // Leitura dos elementos para inserir na fila
+    // Insere na Lista
     for (int i = 0; i < N; i++) {
         scanf("%d", &var[i]);
-        inserefinal(var[i], &fila);  // Insere no final da lista
+        inserefinal(var[i], &fila);
     }
     
-    // Leitura do número de elementos a remover
+    // Numero de elementos pra retirar da fila
     scanf("%d", &M);
     
-    // Leitura dos elementos a serem removidos da fila
+    
     for (int j = 0; j < M; j++) {
         scanf("%d", &var2[j]);
         Busca_Remove(var2[j], &fila);  // Remove o elemento da lista
     }
     
-    // Impressão dos elementos restantes na lista (opcional, se necessário)
+    // Impressão do que restou
     celula *temp = fila;
     while (temp != NULL) {
         printf("%d ", temp->conteudo);

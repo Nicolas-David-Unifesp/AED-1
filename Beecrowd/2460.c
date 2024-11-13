@@ -78,7 +78,7 @@ int main() {
     celula *temp = fila;
     while (temp != NULL) {
         printf("%d", temp->conteudo);
-        printF(" ");
+        printf(" ");
         temp = temp->seg;
     }
     printf("\n");

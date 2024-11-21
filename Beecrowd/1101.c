@@ -1,4 +1,9 @@
-
+/*
+  * nome: 1101.c
+  * descrição: Sequência de Números
+  * data: 21/11/2024
+  *Resolvido por Nicolas David da Cruz Santos
+  */
 
 
 #include <stdio.h>

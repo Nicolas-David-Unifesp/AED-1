@@ -1,5 +1,5 @@
 /*
-  * nome: 2460.c
+  * nome: 1068.c
   * descrição: Balanço de Parenteses
   * data: 13/11/2024
   *Resolvido por Nicolas David da Cruz Santos

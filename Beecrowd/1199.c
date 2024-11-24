@@ -1,5 +1,9 @@
-
-
+/*
+  * nome: 1199.c
+  * descrição: Conversão Simples de Base
+  * data: 24/11/2024
+  *Resolvido por Nicolas David da Cruz Santos
+  */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,10 +13,7 @@ int main() {
     char input[50];
 
     while (1) {
-        // Lê uma linha de entrada
         fgets(input, sizeof(input), stdin);
-        
-        // Remove o caractere de nova linha, se presente
         input[strcspn(input, "\n")] = '\0';
 
         // Se a entrada for um número negativo, encerra o programa

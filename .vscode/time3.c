@@ -12,3 +12,12 @@ for (i = p; i < r; i++) v[i] = w[i-p];
 free (w);
 }
 
+void Mergesort (int p, int r, int v[]) {
+if (p < r - 1) {
+int q = (p + r)/2;
+Mergesort (p, q, v);
+Mergesort (q, r, v);
+Intercala (p, q, r, v);
+}
+}
+

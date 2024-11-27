@@ -42,7 +42,7 @@ int main(){
     for(int a = 0; a < TAM; a++){
         vetor[a] = rand() % TAM;
     }
-    //Verificando tempo de execução do bubble sort=> t2
+    //Verificando tempo de execução do mergesort
     t = clock(); //armazena tempo
     Mergesort( 0, TAM, vetor);
     t = clock() - t; //tempo final - tempo 

@@ -27,7 +27,7 @@ int main(){
     for(int a = 0; a < TAM; a++){
         vetor[a] = rand() % TAM;
     }
-    //Verificando tempo de execução do bubble sort=> t2
+    //Verificando tempo de execução do inserção
     t = clock(); //armazena tempo
     Inserção(TAM, vetor);
     t = clock() - t; //tempo final - tempo 

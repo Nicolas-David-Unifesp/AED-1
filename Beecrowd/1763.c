@@ -1,4 +1,9 @@
-
+/*
+  * nome: 1763.c
+  * descrição: Tradutor do Papai Noel
+  * data: 28/11/2024
+  *Resolvido por Nicolas David da Cruz Santos
+  */
 
 #include <stdio.h>
 #include <string.h>

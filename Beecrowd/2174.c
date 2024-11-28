@@ -1,6 +1,6 @@
 /*
   * nome: 2174.c
-  * descrição: Lista de Chamada- Utilizando Lista Encadeada e mergeSort
+  * descrição: coleção de Pomekons
   * data: 28/11/2024
   *Resolvido por Nicolas David da Cruz Santos
   */

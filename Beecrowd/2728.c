@@ -1,6 +1,6 @@
 /*
   * nome: 2728.c
-  * descrição: 
+  * descrição: Vovó Cobol
   * data: 10/11/2024
   *Resolvido por Nicolas David da Cruz Santos
   */

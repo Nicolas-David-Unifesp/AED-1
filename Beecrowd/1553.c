@@ -1,3 +1,11 @@
+/*
+  * nome: 1553.c
+  * descrição: Perguntas mais Frequentes
+  * data: 12/10/2024
+  *Resolvido por Nicolas David da Cruz Santos
+  */
+
+
 #include <stdio.h>
 
 void BubbleSort(int arr[], int n) {

@@ -1,4 +1,9 @@
-
+/*
+  * nome: 2174.c
+  * descrição: Lista de Chamada- Utilizando Lista Encadeada e mergeSort
+  * data: 28/11/2024
+  *Resolvido por Nicolas David da Cruz Santos
+  */
 
 
 #include <stdio.h>

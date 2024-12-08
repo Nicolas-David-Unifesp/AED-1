@@ -4,7 +4,7 @@
 
 int const TAM = 100000; // Tamanho
 
-// Função Mescla Dois Arrajos
+// Intercala
 void Intercala (int v[], int p, int q, int r) {
   int i, j, k, *w;
   w = malloc ((r-p+1) * sizeof (int));

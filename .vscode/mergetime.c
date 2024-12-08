@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h> // clock(), CLOCKS_PER_SEC e clock_t
+#include <time.h>
 
-int const TAM = 100000; // constante para tamanho do vetor
+int const TAM = 100000; // Tamanho
 
-// Função para mesclar dois sub-arranjos do vetor
+// Função Mescla Dois Arrajos
 void mescla(int v[], int baixo, int meio, int alto) {
     int n1 = meio - baixo + 1;
     int n2 = alto - meio;

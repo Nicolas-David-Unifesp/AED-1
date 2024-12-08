@@ -49,7 +49,7 @@ int main() {
     t = clock() - t; //Delta Tempo
 
     // imprime o tempo na tela
-    printf("Tempo de execucao: %lf s\n", ((double)t) / (CLOCKS_PER_SEC )); // conversão para double
+    printf("Tempo de execucao: %lf s\n", ((double)t) / (CLOCKS_PER_SEC/1000)); // conversão para double
 
     return 0;
 }

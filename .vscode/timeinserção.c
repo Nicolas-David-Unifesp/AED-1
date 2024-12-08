@@ -11,29 +11,28 @@ void Inserção(int n, int v[]) {
         for (i = j - 1; i >= 0 && v[i] > x; i--) {
             v[i + 1] = v[i];
         }
-        v[i + 1] = x; // Aqui a atribuição final é feita após o laço
+        v[i + 1] = x;
     }
 }
 
 int main() {
-    clock_t t; // variável para armazenar tempo
+    clock_t t;
     int vetor[TAM];
 
-    // semente de aleatoriedade
+    // Coloca Valores Aleatorios
     srand((unsigned)time(NULL));
 
-    // geração aleatória dos valores do vetor
+    // Geração Aletória
     for (int a = 0; a < TAM; a++) {
         vetor[a] = rand() % TAM;
     }
 
-    // Verificando tempo de execução do Inserção
-    t = clock(); // armazena tempo inicial
+    t = clock(); // Tempo Incial
     Inserção(TAM, vetor);
-    t = clock() - t; // tempo final - tempo inicial
+    t = clock() - t; // Delta Tempo
 
     // imprime o tempo na tela
-    printf("Tempo de execucao: %lf ms\n", ((double)t) / (CLOCKS_PER_SEC / 1000)); // conversão para double
+    printf("Tempo de execucao: %lf s\n", ((double)t) / (CLOCKS_PER_SEC));
 
     return 0;
 }

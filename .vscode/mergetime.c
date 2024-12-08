@@ -22,13 +22,9 @@ void Intercala (int p, int q, int r, int v[]) {
 void mergesort(int v[], int baixo, int alto) {
     if (baixo < alto) {
         int meio = baixo + (alto - baixo) / 2;
-
-        // Ordena a primeira e a segunda metade
         mergesort(v, baixo, meio);
         mergesort(v, meio + 1, alto);
-
-        // Mescla as duas metades
-        mescla(v, baixo, meio, alto);
+        Intercala(v, baixo, meio, alto);
     }
 }
 

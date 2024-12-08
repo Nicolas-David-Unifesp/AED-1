@@ -5,47 +5,19 @@
 int const TAM = 100000; // Tamanho
 
 // Função Mescla Dois Arrajos
-void mescla(int v[], int baixo, int meio, int alto) {
-    int n1 = meio - baixo + 1;
-    int n2 = alto - meio;
-
-    // Vetores temporários
-    int v1[n1], v2[n2];
-
-    // Copia os dados para os vetores temporários
-    for (int i = 0; i < n1; i++) {
-        v1[i] = v[baixo + i];
-    }
-    for (int j = 0; j < n2; j++) {
-        v2[j] = v[meio + 1 + j];
-    }
-
-    // Mescla os dois sub-arranjos
-    int i = 0, j = 0, k = baixo;
-    while (i < n1 && j < n2) {
-        if (v1[i] <= v2[j]) {
-            v[k] = v1[i];
-            i++;
-        } else {
-            v[k] = v2[j];
-            j++;
-        }
-        k++;
-    }
-
-    // Copia os elementos restantes, se houver
-    while (i < n1) {
-        v[k] = v1[i];
-        i++;
-        k++;
-    }
-    while (j < n2) {
-        v[k] = v2[j];
-        j++;
-        k++;
-    }
+void Intercala (int p, int q, int r, int v[]) {
+  int i, j, k, *w;
+  w = malloc ((r-p) * sizeof (int));
+  i = p; j = q; k = 0;
+  while (i < q && j < r) {
+    if (v[i] <= v[j]) w[k++] = v[i++];
+    else w[k++] = v[j++];
+  }
+  while (i < q) w[k++] = v[i++];
+  while (j < r) w[k++] = v[j++];
+  for (i = p; i < r; i++) v[i] = w[i-p];
+  free (w);
 }
-
 // Função MergeSort
 void mergesort(int v[], int baixo, int alto) {
     if (baixo < alto) {

@@ -1,3 +1,11 @@
+/*
+  * nome: 1110.c
+  * descrição: Jogando Cartas Fora
+  * data: 12/12/2024
+  *Resolvido por Nicolas David da Cruz Santos
+  */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 

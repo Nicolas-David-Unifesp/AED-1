@@ -1,3 +1,11 @@
+/*
+  * nome: 1855.c
+  * descrição: Primo Rápido
+  * data: 15/01/2025
+  *Resolvido por Nicolas David da Cruz Santos
+  */
+
+
 #include <stdio.h>
 #include <math.h>
 

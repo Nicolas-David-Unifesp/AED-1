@@ -1,4 +1,9 @@
-//1195
+/*
+  * nome: 1195.c
+  * descrição:
+  * data: 15/01/2025
+  *Resolvido por Nicolas David da Cruz Santos
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -6,38 +11,32 @@
 
 typedef enum{false, true} bool;
 
-typedef struct leaf
-{
+typedef struct leaf{
 	int info;
 	struct leaf *left;
 	struct leaf *right;
 } leaf;
 
-typedef struct node
-{
+typedef struct node{
 	leaf *info;
 	struct node *next;
 } node;
 
-typedef struct list
-{
+typedef struct list{
 	node *first;
 	node *last;
 	int len;
 } list;
 
-void initList(list *l)
-{
+void initList(list *l){
 	l->first = nl;
 	l->last = nl;
 	l->len = 0;
 }
 
-void deleteList(list *l)
-{
+void deleteList(list *l){
 	node *p = l->first;
-	while(p)
-	{
+	while(p){
 		l->first = l->first->next;
 		free(p);
 		l->len--;
@@ -46,25 +45,20 @@ void deleteList(list *l)
 	l->last = nl;
 }
 
-bool emptyList(list l)
-{
+bool emptyList(list l){
 	return (l.len == 0);
 }
 
-int insertRight(leaf *x, list *l)
-{
+int insertRight(leaf *x, list *l){
 	node *aux = (node*)malloc(sizeof(node));
-	if(aux == nl)
-		return 1;
+	if(aux == nl) return 1;
 	
 	aux->info = x;
 	aux->next = nl;
 	
-	if(l->last == nl)
-		l->first = aux, l->last = aux;
+	if(l->last == nl) l->first = aux, l->last = aux;
 		
-	else
-	{
+	else{
 		l->last->next = aux;
 		l->last = aux;
 	}
@@ -73,8 +67,7 @@ int insertRight(leaf *x, list *l)
 	return 0;
 }
 
-void removeFirst(list *l)
-{
+void removeFirst(list *l){
 	node *aux = l->first;
 	l->first = l->first->next;
 	free(aux);
@@ -85,13 +78,11 @@ void removeFirst(list *l)
 	l->len--;
 }
 
-leaf* head(list l)
-{
+leaf* head(list l){
 	return(l.first->info);
 }
 
-void printBT(leaf *bt, int level)
-{
+void printBT(leaf *bt, int level){
 	int i;
 	
 	if(!bt) return;
@@ -103,10 +94,8 @@ void printBT(leaf *bt, int level)
 	printBT(bt->left, level + 1);
 }
 
-leaf* BTinsert(int x, leaf *bt)
-{	
-	if(bt == nl)
-	{
+leaf* BTinsert(int x, leaf *bt){	
+	if(bt == nl){
 		leaf *aux = (leaf*)malloc(sizeof(leaf));
 		if(aux == nl)
 		{
@@ -121,14 +110,12 @@ leaf* BTinsert(int x, leaf *bt)
 		return aux;
 	}
 	
-	if(x < bt->info)
-	{
+	if(x < bt->info){
 		bt->left = BTinsert(x, bt->left);
 		return bt;
 	}
 	
-	else
-	{
+	else{
 		bt->right = BTinsert(x, bt->right);
 		return bt;
 	}
@@ -136,36 +123,30 @@ leaf* BTinsert(int x, leaf *bt)
 	return nl;
 }
 
-leaf *deleteLeaf(leaf *bt, int x)
-{
+leaf *deleteLeaf(leaf *bt, int x){
 	leaf *p1, *p2;
 	
-	if(bt->info == x)
-	{
-		if(bt->right == bt->left)
-		{
+	if(bt->info == x){
+		if(bt->right == bt->left){
 			free(bt);
 			return nl;
 		}
 		
-		else if(bt->left == nl)
-		{
+		else if(bt->left == nl){
 			p1 = bt->right;
 			bt = nl;
 			
 			return p1;
 		}
 		
-		else if(bt->right == nl)
-		{
+		else if(bt->right == nl){
 			p1 = bt->left;
 			bt = nl;
 			
 			return p1;
 		}
 		
-		else
-		{
+		else{
 			p2 = bt->left;
 			p1 = bt->left;
 			
@@ -179,25 +160,19 @@ leaf *deleteLeaf(leaf *bt, int x)
 		}
 	}
 	
-	if(bt->info > x)
-		bt->left = deleteLeaf(bt->left, x);
-	
-	else
-		bt->right = deleteLeaf(bt->right, x);
-	
+	if(bt->info > x) bt->left = deleteLeaf(bt->left, x);
+	else bt->right = deleteLeaf(bt->right, x);
 	return bt;
 }
 
-leaf* deleteTree(leaf* root)
-{
+leaf* deleteTree(leaf* root){
 	while(root != nl)
 		root = deleteLeaf(root, root->info);
 	
 	return root;
 }
 
-void preOrder(leaf *root)
-{
+void preOrder(leaf *root){
 	if(root == nl) return;
 	
 	printf(" %d", root->info);
@@ -205,8 +180,7 @@ void preOrder(leaf *root)
 	preOrder(root->right);
 }
 
-void inOrder(leaf *root)
-{
+void inOrder(leaf *root){
 	if(root == nl) return;
 	
 	inOrder(root->left);
@@ -214,8 +188,7 @@ void inOrder(leaf *root)
 	inOrder(root->right);
 }
 
-void postOrder(leaf *root)
-{
+void postOrder(leaf *root){
 	if(root == nl) return;
 	
 	postOrder(root->left);
@@ -223,8 +196,7 @@ void postOrder(leaf *root)
 	printf(" %d", root->info);
 }
 
-void BForder(leaf *bt)
-{
+void BForder(leaf *bt){
 	leaf *root = bt;
 	list queue;
 	
@@ -250,8 +222,7 @@ void BForder(leaf *bt)
 	}
 }
 
-leaf* BTsearch(leaf *bt, int key)
-{
+leaf* BTsearch(leaf *bt, int key){
 	if(bt == nl) return nl;
 	
 	if(bt->info == key) return bt;
@@ -263,23 +234,20 @@ leaf* BTsearch(leaf *bt, int key)
 		return BTsearch(bt->right, key);
 }
 
-int main()
-{
+int main(){
 	int c;
 	int t = 0;
 	
 	scanf("%d",&c);
 	
-	while(c--)
-	{
+	while(c--){
 		leaf* tree = nl;
 		
 		int leaves;
 		
 		scanf("%d",&leaves);
 		
-		while(leaves--)
-		{
+		while(leaves--){
 			int x;
 			scanf("%d",&x);
 			

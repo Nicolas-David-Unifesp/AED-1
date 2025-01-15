@@ -2,7 +2,7 @@
 
 int main() {
     int x, y, x1 = 0, y1 = 0, count = 0;
-    char commands[1000]; // Buffer para os comandos
+    char commands[1000]; 
 
     // Leitura do tamanho da matriz
     scanf("%d %d", &x, &y);
@@ -19,15 +19,15 @@ int main() {
 
         mat[0][0] = 1;
 
-        // Limpa o buffer e lê os comandos
-        getchar(); // Consome o '\n' que ficou após o scanf
+        // Limpa o buffer 
+        getchar(); // Consome o '\n' 
         fgets(commands, 1000, stdin); // Lê todos os comandos
 
         // Processa os comandos
         for (int i = 0; commands[i] != '\0'; i++) {
             char c = commands[i];
 
-            if (c == '\n') break; // Ignora a quebra de linha no final
+            if (c == '\n') break; 
             if (c == '>') {
                 if (x1 + 1 < x) {
                     x1++;

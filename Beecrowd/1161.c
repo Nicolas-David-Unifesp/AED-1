@@ -1,3 +1,9 @@
+/*
+  * nome: 1161.c
+  * descrição:
+  * data: 15/01/2025
+  *Resolvido por Nicolas David da Cruz Santos
+*/
 #include <stdio.h>
 #include <math.h>
 
@@ -7,8 +13,8 @@ int main(){
 	int i;
 	
 	while(scanf("%lld %lld", &M, &N) != EOF){
-	fat1 = 1;
-	fat2 = 1;
+		fat1 = 1;
+		fat2 = 1;
 		for(i=M; i>0; i--){
 			fat1 *= M;
 			M--;
@@ -17,8 +23,7 @@ int main(){
 			fat2 *= N;
 			N--;
 		}
-	printf("%lld\n", fat1 + fat2);
+		printf("%lld\n", fat1 + fat2);
 	}
-	
 	return 0;
 }

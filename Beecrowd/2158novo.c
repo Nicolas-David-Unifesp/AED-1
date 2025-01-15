@@ -1,4 +1,9 @@
-//2158
+/*
+  * nome: 2158.c
+  * descrição:
+  * data: 15/01/2025
+  *Resolvido por Nicolas David da Cruz Santos
+*/
 #include <stdio.h>
 long long int np, nh, c=0, atm, lig;
 long long int aresta(long long int np, long long int nh)

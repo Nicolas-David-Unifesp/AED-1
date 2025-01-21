@@ -1,6 +1,6 @@
 /*
   * nome: 1067.c
-  * descrição: Números Impares
+  * descrição: Números Impares.
   * data: 12/10/2024
   *Resolvido por Nicolas David da Cruz Santos
   */

@@ -1,3 +1,10 @@
+/*
+  * nome: 1123.c
+  * descrição: Desvio de Rota
+  * data: 21/01/2025
+  *Resolvido por Nicolas David da Cruz Santos
+  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>

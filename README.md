@@ -1,6 +1,6 @@
 # Exercícios de Programação em C - AED 1 🖥️💻
 
-Este repositório contém uma coleção de exercícios e desafios de programação resolvidos utilizando a linguagem **C**. O objetivo é aprender e praticar conceitos fundamentais de programação, como estruturas de dados, algoritmos, manipulação de strings, entradas e saídas, grafos e entre outros, por meio de problemas do **BEECROWD** e outras fontes.
+Este repositório contém uma coleção de exercícios e desafios de programação resolvidos utilizando a linguagem **C**. O objetivo é aprender e praticar conceitos fundamentais de programação, como estruturas de dados, algoritmos, manipulação de strings, entradas e saídas, grafos e entre outros, por meio de problemas do **BEECROWD**.
 
 ### 🎯 Objetivos:
 - **Aprimorar habilidades em C:** A cada exercício, busco melhorar minha compreensão sobre a linguagem, técnicas de otimização e boas práticas.

@@ -1,3 +1,9 @@
+/*
+  * nome: 1213.c
+  * descrição: The Ones
+  * data: 27/01/2024
+  *Resolvido por Nicolas David da Cruz Santos
+  */
 #include <stdio.h>
 
 int main() {

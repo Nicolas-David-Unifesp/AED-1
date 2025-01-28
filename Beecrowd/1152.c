@@ -39,14 +39,14 @@ int compara(const void *a, const void *b) { // substituir por uma função de or
     return aresta1->w - aresta2->w; // a função ordena de modo crescente a partir da diferença dos pesos das arestas
 }
 
-void AddStruct(int A, int tot){
-    for (int i = 0; i < A; i++) { // percorre todas as arestas e as adiciona na struct arestas dentro de g
+void AddStruct(int B, int total){
+    for (int i = 0; i < B; i++) { // percorre todas as arestas e as adiciona na struct arestas dentro de g
             scanf("%d %d %d", &g[i].u, &g[i].v, &g[i].w);
-            tot += g[i].w; // tamanho total das arestas
+            total += g[i].w; // tamanho total das arestas
     }
 }
-void DefinePaiInicial(int V){
-    for (int i = 0; i < V; i++) { // define os parentes iniciais
+void DefinePaiInicial(int Va){
+    for (int i = 0; i < Va; i++) { // define os parentes iniciais
             p[i] = i;
     }
 }

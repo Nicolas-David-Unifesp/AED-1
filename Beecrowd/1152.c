@@ -75,3 +75,10 @@ int main() {
 
     return 0;
 }
+/*
+Resumo: O processo todo é feito até que V e A sejam 0. Nos ciclos, armazeno as arestas em um vetor dinâmico, armazeno os vértices como pais em um vetor dinâmico.
+Adciono na struct as informações das arestas enquanto somo o total de arestas, Organizo elas de forma crescente, Defino os pais como os vértices.
+Faço o Kruskal: altero o número dos pais para que sejam iguais (se são iguais já estão em ciclo) para que mostem-se ligados e leio o peso da aresta que acabei de ligar
+para saber o peso total mín de arestas.
+Por fim, imprimo o (total - peso minimo).  
+*/

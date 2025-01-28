@@ -1,3 +1,10 @@
+/*
+  * nome: 1152.c
+  * descrição: Estradas Escuras
+  * data: 28/01/2025
+  *Resolvido por Nicolas David da Cruz Santos
+  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h> // Para usar INT_MAX
